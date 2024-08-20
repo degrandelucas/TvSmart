@@ -40,7 +40,7 @@ public class TvSmart {
                 System.out.println( "0 - Aumentar volume");
                 int aumentaDiminuiVolume = leitura.nextInt();
                 if (aumentaDiminuiVolume == 0) {
-                    Volume.diminuiVolume();
+                    Volume.diminuiVolume(); //Criar instância
                 }
                 else{
                     Volume.aumentaVolume();
