@@ -11,8 +11,16 @@ import java.util.Scanner;
 
 public class TvSmart {
 
+    /**
+     * Método principal que executa a simulação de interação com a TV.
+     * 
+     * @param args argumentos de linha de comando (não utilizados)
+     */
     public static void main(String[] args) {
 
+        /**
+         * Cria um objeto Scanner para leitura de entrada do usuário via console.
+         */
         Scanner leitura = new Scanner(System.in);
 
         System.out.println( "Deseja ligar a TV? ");
@@ -51,11 +59,11 @@ public class TvSmart {
                 System.out.println( "1 - Mudar Canal");
                 int mudarCanal = leitura.nextInt();
                 if (mudarCanal == 0) {
-                    Canal canalAtualSelecionado = new Canal(1);
+                    Canal canalAtualSelecionado = new Canal(1); //Criar instância
                     canalAtualSelecionado.apresentarCanalAtual();  
                 }
                 else{
-                    Canal canalAtualSelecionado = new Canal(1);
+                    Canal canalAtualSelecionado = new Canal(1); //Criar instância
                     System.out.println("Novo canal: " + canalAtualSelecionado.trocarCanal());
                 }
             }
