@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 /**
  * A classe TvSmart simula comandos de um controle remoto, da iteração do usuário com a TV.
  * 
@@ -16,19 +15,15 @@ public class TvSmart {
 
         Scanner leitura = new Scanner(System.in);
 
-        boolean ligada = false;
-
         System.out.println( "Deseja ligar a TV? ");
         System.out.println( "0 - Não");
         System.out.println( "1 - Sim");
         int ligarDesligarTV = leitura.nextInt();
 
         if (ligarDesligarTV == 0) {
-            ligada = false;
             System.out.println("TV desligada!");
         }
         else{
-            ligada = true;
             System.out.println("Tv Ligada!");
             System.out.println( "Qual Opcao deseja? ");
             System.out.println( "0 - Volume");
@@ -37,20 +32,32 @@ public class TvSmart {
 
             if (opcao == 0) {
                 System.out.println( "0 - Diminuir volume");
-                System.out.println( "0 - Aumentar volume");
+                System.out.println( "1 - Aumentar volume");
                 int aumentaDiminuiVolume = leitura.nextInt();
                 if (aumentaDiminuiVolume == 0) {
-                    Volume.diminuiVolume(); //Criar instância
+                    Volume volumeAtual = new Volume(10); //Criar instância
+                    volumeAtual.diminuiVolume();
+                    System.out.println("Volume atual: " + volumeAtual.getvolume());
                 }
                 else{
-                    Volume.aumentaVolume();
+                    Volume volumeAtual = new Volume(10); //Criar instância
+                    volumeAtual.aumentaVolume();
+                    System.out.println("Volume atual: " + volumeAtual.getvolume());
                 }
-                
             }
             else{
-                canal();
-
-
+                System.out.println( "Permanecer no canal atual? ");
+                System.out.println( "0 - Não, permanecer no canal atual");
+                System.out.println( "1 - Mudar Canal");
+                int mudarCanal = leitura.nextInt();
+                if (mudarCanal == 0) {
+                    Canal canalAtualSelecionado = new Canal(1);
+                    canalAtualSelecionado.apresentarCanalAtual();  
+                }
+                else{
+                    Canal canalAtualSelecionado = new Canal(1);
+                    System.out.println("Novo canal: " + canalAtualSelecionado.trocarCanal());
+                }
             }
         }
     }
