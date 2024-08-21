@@ -1,18 +1,36 @@
-## Getting Started
+# TvSmart - Simulação de Controle Remoto
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Este projeto consiste em uma aplicação Java que simula as funções básicas de um controle remoto para uma TV. A aplicação permite ligar/desligar a TV, ajustar o volume e trocar de canal, proporcionando uma interação simples e intuitiva com os comandos.
 
-## Folder Structure
+## Funcionalidades Principais
 
-The workspace contains two folders by default, where:
+1. **Ligar/Desligar a TV:** O usuário pode escolher ligar ou desligar a TV ao iniciar a aplicação.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+2. **Ajuste de Volume:** O usuário pode aumentar ou diminuir o volume da TV.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+3. **Troca de Canal:** O usuário pode mudar o canal da TV ou permanecer no canal atual.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## Passo a Passo do Projeto
 
-## Dependency Management
+### Passo 1: Ligar ou Desligar a TV
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Ao iniciar a aplicação, o usuário é questionado se deseja ligar ou desligar a TV. Se escolher desligar, a aplicação termina. Se optar por ligar, o usuário pode prosseguir com os demais comandos.
+
+### Passo 2: Ajustar o Volume
+
+O usuário pode optar por ajustar o volume, escolhendo entre aumentar ou diminuir. O valor do volume é atualizado e exibido conforme a escolha do usuário.
+
+### Passo 3: Trocar de Canal
+
+O usuário pode escolher mudar de canal ou permanecer no canal atual. Se optar por mudar, o novo canal é solicitado e registrado.
+
+## Tecnologias Utilizadas
+
+- **Java:** Linguagem de programação utilizada para desenvolver a aplicação.
+- **Scanner (java.util.Scanner):** Pacote utilizado para capacturar entradas do usuário via console.
+
+## Autor
+
+- **Nome:** Lucas Degrande
+
+
